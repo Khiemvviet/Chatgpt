@@ -1,0 +1,54 @@
+<div class="page">
+    <h1>Project Results & Analysis</h1>
+    
+    <section>
+        <h2>Methodology</h2>
+        <p>We systematically evaluated ChatGPT's performance by:</p>
+        <ol>
+            <li>Populating MongoDB with domain-specific questions and expected answers</li>
+            <li>Routing questions through Node.js server to ChatGPT API</li>
+            <li>Measuring response accuracy and timing metrics</li>
+            <li>Storing and analyzing results in MongoDB</li>
+            <li>Visualizing insights through interactive charts</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Results Visualization</h2>
+        
+        <div class="chart-container">
+            <h3>Accuracy by Domain</h3>
+            <canvas id="accuracyChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h3>Average Response Time</h3>
+            <canvas id="responseTimeChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h3>Performance Summary</h3>
+            <canvas id="summaryChart" width="400" height="250"></canvas>
+        </div>
+    </section>
+
+    <section>
+        <h2>WebSocket Demo</h2>
+        <div class="websocket-demo">
+            <p>Real-time communication test:</p>
+            <div id="websocket-messages"></div>
+            <input type="text" id="websocket-input" placeholder="Type a message..." style="width: 70%; padding: 0.5rem;">
+            <button onclick="sendWebSocketMessage()" style="padding: 0.5rem 1rem;">Send</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Middleware Test</h2>
+        <p>Test the Express middleware: <a href="/api/add?a=5&b=7" target="_blank">/api/add?a=5&b=7</a></p>
+        <p id="middleware-result"></p>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/charts.js"></script>
